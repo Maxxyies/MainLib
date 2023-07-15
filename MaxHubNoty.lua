@@ -78,7 +78,7 @@ function Nord:TextConstraint(Item)
 	New("UITextSizeConstraint", {Parent = Item, MaxTextSize = Item["TextSize"]}); Item["TextScaled"] = true
 end
 
-function Nord:ApplyTheme(Theme, Frame)
+function Nord:ApplyTheme(Nord["Config"]["Theme"], Frame)
     local Desc = Frame:GetDescendants()
     if Nord["Themes"][Theme:lower()] then
         for i,v in next, Nord["Themes"][Theme:lower()] do
